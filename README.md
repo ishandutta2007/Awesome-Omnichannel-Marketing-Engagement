@@ -3,7 +3,7 @@
 <div align="center">
 
 <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-<a href="https://github.com/ishandutta2007/Awesome-Omnichannel-Marketing-Engagement/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Omnichannel-Marketing-Engagement?style=flat-square&color=gold" alt="GitHub stars" /></a>
+<a href="https://github.com/ishandutta2007/Awesome-Omnichannel-Marketing-Engagement/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Omnichannel-Marketing-Engagement?style=flat-square&color=gold" alt="GitHub_Stars" /></a>
 <a href="https://github.com/ishandutta2007/Awesome-Omnichannel-Marketing-Engagement/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Omnichannel-Marketing-Engagement?style=flat-square&color=blue" alt="GitHub forks" /></a>
 <a href="https://github.com/ishandutta2007/Awesome-Omnichannel-Marketing-Engagement/issues"><img src="https://img.shields.io/github/issues/ishandutta2007/Awesome-Omnichannel-Marketing-Engagement?style=flat-square" alt="GitHub issues" /></a>
 <a href="https://github.com/ishandutta2007/Awesome-Omnichannel-Marketing-Engagement/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-Omnichannel-Marketing-Engagement?style=flat-square" alt="License" /></a>
@@ -73,7 +73,7 @@ Curated self-hosted and open-source customer messaging systems, notification inf
 
 > **Sorted descending by GitHub stargazer count.** Badges link directly to each project's stargazers community.
 
-| Project & Repository | Stars | Description & Capabilities | Primary Tech Stack | License |
+| Project & Repository | GitHub_Stars | Description & Capabilities | Primary Tech Stack | License |
 | :--- | :--- | :--- | :--- | :--- |
 | **[Novu](https://github.com/novuhq/novu)** | [![Stars](https://img.shields.io/github/stars/novuhq/novu?style=social&color=white)](https://github.com/novuhq/novu/stargazers) | Open-source notification infrastructure and workflow orchestration engine. Provides unified APIs across Email, SMS, Push, Chat, and In-App notification centers with subscriber preference management. | TypeScript, NestJS, React, Redis, MongoDB | MIT |
 | **[Chatwoot](https://github.com/chatwoot/chatwoot)** | [![Stars](https://img.shields.io/github/stars/chatwoot/chatwoot?style=social&color=white)](https://github.com/chatwoot/chatwoot/stargazers) | Open-source omnichannel customer engagement suite and live messaging platform. Connects customer conversations across Website Live Chat, WhatsApp, Twitter, Facebook, Email, and SMS into a unified inbox. | Ruby on Rails, Vue.js, PostgreSQL, Redis | MIT |
