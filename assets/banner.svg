@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e1a" />
+      <stop offset="50%" stop-color="#141829" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="glowPulse" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0" />
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      .bg-grid { stroke: rgba(255, 255, 255, 0.04); stroke-width: 1; }
+      .channel-track { stroke: rgba(99, 102, 241, 0.2); stroke-dasharray: 6 6; stroke-width: 2; fill: none; }
+      .pulse-circle {
+        animation: pulse 4s ease-in-out infinite alternate;
+      }
+      .node-orbit {
+        animation: float 6s ease-in-out infinite alternate;
+      }
+      @keyframes pulse {
+        0% { transform: scale(0.95); opacity: 0.4; }
+        100% { transform: scale(1.05); opacity: 0.8; }
+      }
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
+        100% { transform: translateY(0px); }
+      }
+      .signal-dash {
+        stroke-dasharray: 8 16;
+        animation: dashMove 20s linear infinite;
+      }
+      @keyframes dashMove {
+        to { stroke-dashoffset: -1000; }
+      }
+      .badge-box {
+        backdrop-filter: blur(8px);
+        fill: rgba(30, 41, 59, 0.7);
+        stroke: rgba(99, 102, 241, 0.35);
+        stroke-width: 1.5;
+        rx: 16;
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="340" fill="url(#bgGrad)" rx="16" />
+
+  <!-- Subtle Matrix Grid -->
+  <g class="bg-grid">
+    <path d="M 0,60 L 1200,60 M 0,120 L 1200,120 M 0,180 L 1200,180 M 0,240 L 1200,240 M 0,300 L 1200,300" />
+    <path d="M 150,0 L 150,340 M 300,0 L 300,340 M 450,0 L 450,340 M 600,0 L 600,340 M 750,0 L 750,340 M 900,0 L 900,340 M 1050,0 L 1050,340" />
+  </g>
+
+  <!-- Animated Dynamic Ambient Glows in background -->
+  <circle cx="150" cy="80" r="140" fill="url(#glowPulse)" class="pulse-circle" />
+  <circle cx="1060" cy="240" r="170" fill="url(#glowPulse)" class="pulse-circle" style="animation-delay: -2s;" />
+
+  <!-- Animated Connectivity Channels (Behind Foreground Text) -->
+  <path class="channel-track signal-dash" d="M 50,280 C 250,330 380,240 550,280 C 750,320 950,220 1150,260" stroke="#38bdf8" />
+  <path class="channel-track signal-dash" d="M 80,70 C 280,30 450,110 650,50 C 850,0 1020,80 1120,40" stroke="#a855f7" />
+
+  <!-- Floating Omnichannel Badges (Right & Left sides, kept off text center) -->
+  <g class="node-orbit">
+    <!-- Email Pill -->
+    <rect x="80" y="220" width="130" height="42" class="badge-box" />
+    <text x="145" y="247" fill="#93c5fd" font-size="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="600" text-anchor="middle">✉ Email Journeys</text>
+
+    <!-- SMS Pill -->
+    <rect x="990" y="70" width="130" height="42" class="badge-box" />
+    <text x="1055" y="97" fill="#a7f3d0" font-size="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="600" text-anchor="middle">💬 SMS &amp; Chat</text>
+
+    <!-- Push Notification Pill -->
+    <rect x="970" y="210" width="150" height="42" class="badge-box" />
+    <text x="1045" y="237" fill="#fbcfe8" font-size="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="600" text-anchor="middle">🔔 Push &amp; In-App</text>
+
+    <!-- Webhook/CDP Pill -->
+    <rect x="60" y="90" width="140" height="42" class="badge-box" />
+    <text x="130" y="117" fill="#fed7aa" font-size="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="600" text-anchor="middle">⚡ CDP &amp; Automation</text>
+  </g>
+
+  <!-- Central Foreground Titles & Subtitles (Completely clear of overlap) -->
+  <g transform="translate(600, 125)">
+    <!-- Top Pill Category Header -->
+    <rect x="-180" y="-72" width="360" height="30" rx="15" fill="#312e81" stroke="#6366f1" stroke-width="1.2" />
+    <text x="0" y="-52" text-anchor="middle" fill="#c7d2fe" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" letter-spacing="1.5">★ CURATED ECOSYSTEM DIRECTORY ★</text>
+
+    <!-- Main Title -->
+    <text x="0" y="2" text-anchor="middle" fill="url(#primaryGrad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="40" font-weight="800" letter-spacing="-0.5" filter="url(#glow)">Awesome Omnichannel</text>
+    <text x="0" y="44" text-anchor="middle" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="-0.5">Marketing Engagement</text>
+
+    <!-- Subtitle -->
+    <text x="0" y="92" text-anchor="middle" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="500">Cross-Channel Orchestration • Customer Journeys • Behavioral Messaging</text>
+
+    <!-- Tech specs / Tags -->
+    <g transform="translate(0, 132)">
+      <text x="0" y="0" text-anchor="middle" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">Enterprise SaaS Platforms ❖ Open-Source Self-Hosted Architectures ❖ Developer APIs</text>
+    </g>
+  </g>
+</svg>
